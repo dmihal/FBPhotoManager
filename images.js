@@ -1,6 +1,6 @@
 function loadImages() {
   var imgContainer = document.getElementById('images');
-  FB.api('/me/photos', function(response) {
+  FB.api('/me/photos?fields=picture', function(response) {
     for (var i = 0; i < response.data.length; i++) {
       var photo = response.data[i];
       var img = document.createElement('img');
